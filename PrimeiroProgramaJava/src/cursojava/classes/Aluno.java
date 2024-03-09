@@ -1,6 +1,9 @@
 package cursojava.classes;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 
 /**
  * 
@@ -17,19 +20,19 @@ public class Aluno {
 	private String nomepai;
 	private String nomeMae;
 	
-	private Disciplina disciplina = new Disciplina();
+	private List <Disciplina> disciplinas = new ArrayList<Disciplina>();
 	
-	public void setDisciplina(Disciplina disciplina) {
-		this.disciplina = disciplina;
+	public void setDisciplinas(List<Disciplina> disciplinas) {
+		this.disciplinas = disciplinas;
 	}
 	
-	public Disciplina getDisciplina() {
-		return disciplina;
+	public List<Disciplina> getDisciplinas() {
+		return disciplinas;
 	}
-		
 	
 
-	public Aluno() {/*Cria os dados na memoria do java Padrão*/
+	/*Cria os dados na memoria do java Padrão*/
+	public Aluno() {
 		
 	}
 	
@@ -120,8 +123,7 @@ public class Aluno {
 
 	
 	public double getMediaNota() {
-		return  (disciplina.getNota1() + disciplina.getNota2() 
-				+ disciplina.getNota3() + disciplina.getNota4()) / 4;
+		return  0;
 	}
 	
 	
@@ -140,7 +142,7 @@ public class Aluno {
 	public String toString() {
 		return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", registroGeral="
 				+ registroGeral + ", numeroCpf=" + numeroCpf + ", matriculaEscolar=" + matriculaEscolar + ", Escola="
-				+ Escola + ", nomepai=" + nomepai + ", nomeMae=" + nomeMae + ", disciplina=" + disciplina + "]";
+				+ Escola + ", nomepai=" + nomepai + ", nomeMae=" + nomeMae + "]";
 	}
 
    

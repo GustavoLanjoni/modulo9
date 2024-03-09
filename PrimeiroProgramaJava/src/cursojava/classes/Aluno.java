@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
+
 /**
  * 
  */
@@ -19,6 +20,8 @@ public class Aluno {
 	private String Escola;
 	private String nomepai;
 	private String nomeMae;
+	
+	
 	
 	private List <Disciplina> disciplinas = new ArrayList<Disciplina>();
 	
@@ -123,7 +126,12 @@ public class Aluno {
 
 	
 	public double getMediaNota() {
-		return  0;
+		double somaNotas = 0.0;
+			for (Disciplina disciplina : disciplinas) {
+				somaNotas += disciplina.getNota();
+			}
+		
+		return  somaNotas / disciplinas.size();
 	}
 	
 	

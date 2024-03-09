@@ -3,6 +3,7 @@ package cursojava.executavel;
 import javax.swing.JOptionPane;
 
 import cursojava.classes.Aluno;
+import cursojava.classes.Disciplina;
 
 public class PrimeiraClasseJava {
     public static void main(String[] args) {
@@ -18,20 +19,7 @@ public class PrimeiraClasseJava {
     	String mae = JOptionPane.showInputDialog("Qual nome da sua mâe?");
     	String pai = JOptionPane.showInputDialog("Qual nome do seu pai?");
     	
-    	String disciplina1 = JOptionPane.showInputDialog("Disciplina 1?");
-    	String nota1 = JOptionPane.showInputDialog("Qual sua nota1?");
-    	
-    	String disciplina2 = JOptionPane.showInputDialog("Disciplina 2?");
-    	String nota2 = JOptionPane.showInputDialog("Qual sua nota2?");
-    	
-    	String disciplina3 = JOptionPane.showInputDialog("Disciplina 3?");
-    	String nota3 = JOptionPane.showInputDialog("Qual sua nota3?");
-    	
-    	String disciplina4 = JOptionPane.showInputDialog("Disciplina 4?");
-    	String nota4 = JOptionPane.showInputDialog("Qual sua nota4?");
-    	
-    	
-    	
+  
     	
         /* new Aluno() é uma instancia (Criação de objeto) */
         Aluno aluno1 = new Aluno();
@@ -40,14 +28,41 @@ public class PrimeiraClasseJava {
         aluno1.setIdade(Integer.valueOf(idade));
         aluno1.setDataNascimento(nascimento);
         aluno1.setRegistroGeral(rg);
-        aluno1.setNumeroCpf(cpf);
+        aluno1.setNumeroCpf(cpf);	
         aluno1.setMatriculaEscolar(matricula);
         aluno1.setEscola(escola);
         aluno1.setNomeMae(mae);
         aluno1.setNomepai(pai);
         
-      
+        Disciplina disciplina1 = new Disciplina();
+        disciplina1.setDisciplina("Banco de dados");
+        disciplina1.setNota(80);
         	
+        aluno1.getDisciplinas().add(disciplina1);
+        
+        /*=========================================*/   
+        Disciplina disciplina2 = new Disciplina();
+        disciplina2.setDisciplina("Html5");
+        disciplina2.setNota(90);
+        
+        aluno1.getDisciplinas().add(disciplina2);
+        
+        /*=========================================*/    
+        Disciplina disciplina3 = new Disciplina();
+        disciplina3.setDisciplina("Matematica");
+        disciplina3.setNota(90);
+        
+        aluno1.getDisciplinas().add(disciplina3);
+        
+        /*=========================================*/   
+        
+        Disciplina disciplina4 = new Disciplina();
+        disciplina4.setDisciplina("Geografia");
+        disciplina4.setNota(100);
+        
+        aluno1.getDisciplinas().add(disciplina4);
+        
+        /*=========================================*/  
         
         
         /*Descrição de um obejto na memoria*/

@@ -139,12 +139,19 @@ public class Aluno {
 	
 	public String getAlunoAprovado() {
 		double media = this.getMediaNota();
-		if (media >= 70) {
-			return "Aluno Aprovado";
+		if (media >= 50) {
+			if (media >= 70) {
+				return "Aluno Aprovado";
+				
+			}else {
+				return "Aluno de recupeção";
+			}
 		}else {
 			return "Aluno Reprevado";
 		}
 	}
+	
+	
 
 	@Override
 	public String toString() {

@@ -10,14 +10,14 @@ public class PrimeiraClasseJava {
     	
     	
     	String nome = JOptionPane.showInputDialog("Qual o nome da aluno?");
-    	String idade = JOptionPane.showInputDialog("Qual sua idade?");
+    	/*String idade = JOptionPane.showInputDialog("Qual sua idade?");
     	String nascimento = JOptionPane.showInputDialog("Qual sua data de nascimento?");
     	String rg = JOptionPane.showInputDialog("Qual seu RG?");
     	String cpf = JOptionPane.showInputDialog("Qual seu CPF?");
     	String matricula = JOptionPane.showInputDialog("Qual a data da matricula escolar?");
     	String escola = JOptionPane.showInputDialog("Qual o nome da  escola?");
     	String mae = JOptionPane.showInputDialog("Qual nome da sua mâe?");
-    	String pai = JOptionPane.showInputDialog("Qual nome do seu pai?");
+    	String pai = JOptionPane.showInputDialog("Qual nome do seu pai?");*/
     	
   
     	
@@ -25,14 +25,14 @@ public class PrimeiraClasseJava {
         Aluno aluno1 = new Aluno();
         
         aluno1.setNome(nome);
-        aluno1.setIdade(Integer.valueOf(idade));
+        /*aluno1.setIdade(Integer.valueOf(idade));
         aluno1.setDataNascimento(nascimento);
         aluno1.setRegistroGeral(rg);
         aluno1.setNumeroCpf(cpf);	
         aluno1.setMatriculaEscolar(matricula);
         aluno1.setEscola(escola);
         aluno1.setNomeMae(mae);
-        aluno1.setNomepai(pai);
+        aluno1.setNomepai(pai);*/
         
         
        for (int pos = 1; pos <= 4; pos++) {

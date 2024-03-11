@@ -34,6 +34,8 @@ public class PrimeiraClasseJava {
         aluno1.setNomeMae(mae);
         aluno1.setNomepai(pai);
         
+        
+        
         Disciplina disciplina1 = new Disciplina();
         disciplina1.setDisciplina("Banco de dados");
         disciplina1.setNota(80);

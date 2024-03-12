@@ -1,5 +1,8 @@
 package cursojava.executavel;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.swing.JOptionPane;
 
 import cursojava.classes.Aluno;
@@ -8,8 +11,11 @@ import cursojava.classes.Disciplina;
 public class PrimeiraClasseJava {
     public static void main(String[] args) {
     	
+    	List<Aluno> alunos = new ArrayList<Aluno>();	
     	
-    	String nome = JOptionPane.showInputDialog("Qual o nome da aluno?");
+    	for (int qtd = 1; qtd <=2; qtd++) {
+    	
+    	String nome = JOptionPane.showInputDialog("Qual o nome da aluno?"+qtd+"");
     	/*String idade = JOptionPane.showInputDialog("Qual sua idade?");
     	String nascimento = JOptionPane.showInputDialog("Qual sua data de nascimento?");
     	String rg = JOptionPane.showInputDialog("Qual seu RG?");
@@ -48,26 +54,28 @@ public class PrimeiraClasseJava {
        /*Remover uma disciplina*/
         
        int escolha = JOptionPane.showConfirmDialog(null, "Deseja remover alguma disciplina ?");
-       		if (escolha == 0) {
+       		if (escolha == 0) {/*Opção 	Sim e Zero*/
+       			
+       			int continuarRemover = 0;
+       			while(continuarRemover == 0) {
+       			
        			String disciplinaRemover = JOptionPane.showInputDialog("Qual a disciplina 1, 2, 3, 4 ?");
        			aluno1.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue() - 1);
-       		
+       			continuarRemover = JOptionPane.showConfirmDialog(null,"Continue removendo");
+       			
+       			
+       			
+       			}
        		}
-       		
-        
-        
-        /*Descrição de um obejto na memoria*/
-		
-		System.out.println(aluno1.toString());
-		System.out.println("Meida do aluno: " + aluno1.getMediaNota());
-		System.out.println("Resultado: " + aluno1.getAlunoAprovado());
-    	
-    	
-    	
-    	
-    	
-		
-        
-        
+       		alunos.add(aluno1);
+       		for (Aluno aluno : alunos) {
+       				
+       		  /*Descrição de um obejto na memoria*/
+       			
+       			System.out.println(aluno.toString());
+       			System.out.println("Meida do aluno: " + aluno.getMediaNota());
+       			System.out.println("Resultado: " + aluno.getAlunoAprovado());
+			}
+    	}   
     }
 }

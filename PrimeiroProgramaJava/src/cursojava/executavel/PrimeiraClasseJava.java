@@ -1,6 +1,7 @@
 package cursojava.executavel;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import javax.swing.JOptionPane;
@@ -65,35 +66,26 @@ public class PrimeiraClasseJava {
        			
        			
        			
-       			}
-       		}
+       			    
+       		     }
        		alunos.add(aluno1);
-       		for (Aluno aluno : alunos) {
-       				
-       		 /*Quando encontra o nome Gustavo esse nome vai ser removido da lista*/
-       			/*Ai codigo vai ser parado no break caso encontre*/
-       			
-       			if (aluno.getNome().equalsIgnoreCase("Gustavo")) {
-       				
-       				alunos.remove(aluno);
-       			break;
-       			}else {/*Se não ele vai continuar e calcular a media dos outros aluno*/
-       				
-           			System.out.println(aluno.toString());
-           			System.out.println("Meida do aluno: " + aluno.getMediaNota());
-           			System.out.println("Resultado: " + aluno.getAlunoAprovado());
-       			}
-			}
-       		for (Aluno aluno : alunos) {
-       			System.out.println("Aluno que sobraram na lista");
-       			System.out.println(aluno.getNome());
-       			System.out.println("Sua materias são");
-       			
-       			for  (Disciplina disciplina : aluno.getDisciplinas()) {
-       				System.out.println(disciplina.getDisciplina());
-       				
-       			}
        		}
+       		for (int pos = 0; pos < alunos.size(); pos ++) {
+       			
+       			Aluno aluno = alunos.get(pos);
+       			
+       			System.out.println("Aluno: " + aluno.getNome());
+       			System.out.println("Media do aluno: " + aluno.getMediaNota());
+       			System.out.println("Resultado: " + aluno.getAlunoAprovado());
+       			
+       			for (Disciplina dsc : aluno.getDisciplinas()) {
+       				System.out.println("Materia = " + aluno.getDisciplinas() + "Nora" + aluno.getMediaNota());
+       				
+       			}
+       			
+       			
+       			
+       		} 
     	}   
     }
 }

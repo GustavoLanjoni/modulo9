@@ -11,21 +11,13 @@ import cursojava.constantes.StatusAluno;
 /**
  * 
  */
-public class Aluno {
+public class Aluno extends Pessoa {
 	/*Atributos do Aluno*/
-	private String nome;
-	private int idade;
-	private String dataNascimento;
-	private String registroGeral;
-	private String numeroCpf;
+	
 	private String matriculaEscolar;
 	private String Escola;
-	private String nomepai;
-	private String nomeMae;
+	private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
 	
-	
-	
-	private List <Disciplina> disciplinas = new ArrayList<Disciplina>();
 	
 	public void setDisciplinas(List<Disciplina> disciplinas) {
 		this.disciplinas = disciplinas;

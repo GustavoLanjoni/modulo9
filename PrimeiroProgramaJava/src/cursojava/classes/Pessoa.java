@@ -1,5 +1,7 @@
 package cursojava.classes;
 
+/* HERANÇA Classe pai ou classe master ou superclasse (Atributos comuns a todos objetos filhos)*/
+
 public class Pessoa {
 
 	protected String nome;
@@ -56,6 +58,9 @@ public class Pessoa {
 		this.nomeMae = nomeMae;
 	}
 	
-	
+	/*Retorna false ou verdadeiro*/
+	public boolean pessoaMaiorIdade() {
+		return idade >= 18;
+	}
 	
 }

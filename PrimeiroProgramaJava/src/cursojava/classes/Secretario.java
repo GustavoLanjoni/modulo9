@@ -27,4 +27,13 @@ public class Secretario extends Pessoa {
 	}
 	
 	
+	@Override
+	public String toString() {
+		return "Secretario [registro=" + registro + ", nivelCargo=" + nivelCargo + ", experiencia=" + experiencia
+				+ ", nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", registroGeral="
+				+ registroGeral + ", numeroCpf=" + numeroCpf + ", nomepai=" + nomepai + ", nomeMae=" + nomeMae + "]";
+	}
+	
+	
+	
 }

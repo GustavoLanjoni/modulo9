@@ -15,6 +15,12 @@ import cursojava.constantes.StatusAluno;
 public class PrimeiraClasseJava {
     public static void main(String[] args) {
     	
+    	String usuario = JOptionPane.showInputDialog("Infome o usuario");    	
+    	String senha = JOptionPane.showInputDialog("Infome o senha");
+    	
+    	if (usuario.equalsIgnoreCase("admin") && senha.equalsIgnoreCase("admin")) {
+    	
+    	
     	List<Aluno> alunos = new ArrayList<Aluno>();
     	
     	/*E uma lista também que dentro dela temos uma chave que indentifica uma sequencia de valores também*/
@@ -111,5 +117,6 @@ public class PrimeiraClasseJava {
     	for (Aluno aluno : maps.get(StatusAluno.REPROVADO)) {
     		System.out.println(aluno.getNome() + " " + "Resultado: " + aluno.getAlunoAprovado() + "Com media de: " + " " + aluno.getMediaNota());
     	}
-    }
+     }
+   }
 }

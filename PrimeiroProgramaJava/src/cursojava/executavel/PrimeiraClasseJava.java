@@ -15,7 +15,7 @@ import cursojava.constantes.StatusAluno;
 public class PrimeiraClasseJava {
     public static void main(String[] args) {
     	
-    	String usuario = JOptionPane.showInputDialog("Infome o usuario");    	
+    	String usuario = JOptionPane.showInputDialog("Infome login");    	
     	String senha = JOptionPane.showInputDialog("Infome o senha");
     	
     	if (usuario.equalsIgnoreCase("admin") && senha.equalsIgnoreCase("admin")) {
